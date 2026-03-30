@@ -4,32 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONTROL // 2019</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+        /*  selector {
+        
+        properties: value; 
+        
+        } 
+        for example:     
+        car-seat {
+            textile-type: leather; 
+            color: brown; 
+            stitching: white; 
+    
+        }*/
+        
+        /* root selector - defines defaults for the entire page unless specified by a child element  */ 
+
+        * { 
+           --button-bg: #0B0D0C; 
+           --button-border: #35393A; 
+           --button-color: #909291;
+           --button-hover: #E7E7E7; 
+           --control-red: rgb(182, 33, 33); 
+
+            font-family: "Bricolage Grotesque", sans-serif;
+            font-optical-sizing: auto;
+
+            font-variation-settings:
+                "wdth" 100;
+        
+
+        }
+
+
+        /*element*/
+
+        body {
+
+            background-color: slategray;
+            background: url('./assets/Polaris.webp');
+            padding: 95px;
+            overflow: hidden; 
+     
+
+        }
+
+        /*class 
+        
+        .class-name{ } */
+
+        .return { 
+          color: var(--button-hover);
+        }
+
+        /* id 
+        #id-name { } */ 
+    
+        #logo {
+
+            margin-bottom: 185px;
+            
+        }
+
+        #logo img {
+            width: 256px; 
+        }
+
+       
+        .return span {
+            background-color: black;
+            color: white; 
+        } 
+
+
+
+        .nav-group {
+            margin-bottom: 100px; 
+            padding: 0px; 
+        }
+
+    
+        .nav-group li { 
+
+            background-color: var(--button-bg);
+            width: 250px; 
+            color: var(--button-color); 
+            padding: 20px; 
+            border-width: 1px; 
+            border-style: solid; 
+            border-color: var(--button-border);
+            margin-bottom: 5px; 
+            list-style: "";
+
+        }
+
+        .nav-group li:hover{
+            background-color: var(--button-hover);
+            color: var(--button-bg);
+        }
+
+
+
+        #B{
+            background-color: white;
+            color: black; 
+        }
+
+    
+
+        .footer{ 
+            margin-top: 10px; 
+            background-color: var(--button-bg);
+            width: 500px; 
+            color: var(--button-color); 
+            padding: 20px; 
+            border-width: 1px; 
+            border-style: solid; 
+            border-color: var(--button-border);
+
+
+        }
+
+        
+
+    </style>
+
+    
 </head>
 <body>
-    <!-- LOGO SECTION -->
-    <header id="logo">
-        <img src="./assets/Control_video_game_logo.svg.png" alt="CONTROL Logo">
-    </header>
-    <!-- Create THE BUTTON GROUPs-->
+
+    <!--LOGO SECTION-->
+
+    <div id="logo"><svg width="256" height="47" viewBox="0 0 256 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M22.2482 0H25.607C34.4697 0.914457 42.6054 6.86609 45.703 15.2648C47.9148 9.55837 52.3487 4.72554 57.9551 2.19674C60.3257 1.0575 62.9164 0.536413 65.4713 0H69.2908C78.686 0.648804 87.3491 7.19815 90.2214 16.1997C90.2726 11.188 90.2111 6.18152 90.247 1.16989C93.2524 1.18011 96.2579 1.15967 99.2582 1.19033C105.412 9.60946 111.51 18.0746 117.757 26.4273C117.639 21.3901 117.793 16.3529 117.741 11.3158C115.417 11.2749 113.092 11.2953 110.773 11.28C110.747 7.90826 110.753 4.53652 110.768 1.16478C116.63 1.18011 122.493 1.18011 128.36 1.16478C128.371 16.0771 128.365 30.9894 128.36 45.8965C125.37 45.8863 122.38 45.8914 119.39 45.8965C113.205 37.5694 107.25 29.0583 100.943 20.8333C100.866 29.186 100.932 37.5438 100.907 45.8965C97.3638 45.8965 93.8156 45.8608 90.2726 45.9221C90.1804 40.9309 90.2828 35.9397 90.2214 30.9485C87.3235 39.7303 78.9676 46.2541 69.7363 47H66.3212C57.2178 46.5096 48.8825 40.2821 45.6825 31.7965C42.59 40.2616 34.2751 46.4074 25.2742 47H22.2534C12.5407 46.5555 3.59608 39.4953 0.995125 30.1413C-1.60072 21.9878 1.03096 12.6134 7.15449 6.70772C11.1788 2.7638 16.647 0.464891 22.2482 0ZM17.1538 13.0783C13.5852 15.2443 11.2505 19.3211 11.3017 23.5C11.2505 26.8309 12.6994 30.1158 15.0956 32.4147C18.4134 35.6127 23.5846 36.7264 27.9007 35.0508C30.8601 34.0086 33.1641 31.6943 34.7359 29.0429C38.11 29.283 41.4892 29.0378 44.8684 29.1758C44.0441 25.4822 44.0441 21.6455 44.8479 17.9468C41.4585 18.0082 38.0639 17.9571 34.6694 17.9826C33.6146 16.2099 32.2937 14.5496 30.558 13.3899C26.6668 10.6823 21.1679 10.5546 17.1538 13.0783ZM64.734 11.6427C59.445 12.925 55.4156 18.0439 55.4771 23.4847C55.39 28.5576 58.8255 33.416 63.6179 35.0865C68.5177 36.9614 74.4774 35.1836 77.5903 30.9894C80.3091 27.5512 80.8927 22.6264 79.111 18.6314C76.8479 13.2162 70.4121 10.0743 64.734 11.6427Z"
+            fill="white" />
+        <path
+            d="M205.693 0H209.482C216.02 0.679457 222.353 3.86728 226.357 9.13435C228.036 11.2034 229.178 13.63 230.141 16.0924C230.202 11.1165 230.13 6.14065 230.171 1.16478C233.74 1.21587 237.309 1.09837 240.877 1.2363C240.785 12.7666 240.862 24.3021 240.842 35.8324C245.874 35.8477 250.907 35.8273 255.94 35.8426V45.8812C247.349 45.9119 238.763 45.8659 230.171 45.9067C230.12 40.936 230.223 35.9601 230.125 30.9894C227.171 39.9296 218.518 46.5811 209.072 47H205.396C200.066 46.2899 194.89 44.037 191.101 40.1697C186.472 35.6894 184.045 29.2422 184.102 22.841C182.52 26.7032 179.32 29.702 175.531 31.3776C179.161 36.2207 182.811 41.0433 186.442 45.8863C181.972 45.9221 177.497 45.8301 173.027 45.9374C169.397 40.8696 165.956 35.6689 162.357 30.5807C162.331 35.6842 162.362 40.7878 162.342 45.8914C158.778 45.8965 155.215 45.8812 151.651 45.9016C151.641 30.9893 151.641 16.0771 151.651 1.16478C157.898 1.20565 164.144 1.13413 170.385 1.19543C178.27 1.36913 185.218 8.3425 185.274 16.2252C186.155 13.8854 187.245 11.607 188.751 9.60435C192.693 4.14315 199.062 0.8225 205.693 0ZM162.347 11.2851C162.362 15.3721 162.321 19.459 162.367 23.546C165.578 23.3365 169.377 24.3634 172.008 21.9827C174.758 19.6991 174.722 15.086 171.993 12.8024C169.361 10.4166 165.552 11.515 162.347 11.2851ZM204.961 11.5661C200.639 12.5316 196.984 16.0004 195.852 20.2815C194.628 24.4553 195.929 29.2217 199.062 32.2359C202.206 35.4441 207.193 36.6549 211.463 35.2449C217.453 33.4926 221.288 26.7594 219.737 20.7209C218.37 14.3095 211.335 9.94663 204.961 11.5661Z"
+            fill="white" />
+        <path
+            d="M130.075 1.16479C136.721 1.19034 143.367 1.14947 150.018 1.19034C150.028 4.52632 150.018 7.86229 150.023 11.2034C146.91 11.1983 143.802 11.3158 140.694 11.3107C140.746 22.841 140.843 34.3713 140.679 45.9016C137.146 45.8863 133.608 45.8863 130.075 45.8965C130.06 30.9894 130.055 16.0771 130.075 1.16479Z"
+            fill="white" />
+    </svg>
+</div> 
+
+    <!--CREATE THE BUTTON GROUPS-->
+
     <nav class="nav-class">
         <ul class="nav-group">
-            <li>Continue Game <span>A</span></li>
+            <li>Continue Game</li>
             <li>New Game</li>
             <li>Mission Select</li>
             <li>Options</li>
             <li>Credits</li>
-        </ul>           
+        </ul>
     </nav>
-
-    <div class="return"><span id="B">B</span> Return to Title Screen</div>
-
-
-
-
-    <footer class="footer">        
+    
+    <!--DIV IS A CONTAINER-->
+    <div class="return"><span id="B">B</span> Return to Title Screen</div> 
+    <footer class="footer">
         <h2>Credits</h2>
-        Background image: <a href="">Steam Community</a>
-
+        <ul>
+        <li>Background Image: <a href="https://control.fandom.com/wiki/Polaris">Control Wiki</a></li></ul>
     </footer>
+
+    
 </body>
 </html>

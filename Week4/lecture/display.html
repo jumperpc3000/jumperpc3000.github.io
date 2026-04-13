@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISPLAY</title>
+    <style>
+
+        ul > li {
+            display: inline;
+        }
+
+        .cards > div { 
+            background-color: darkblue;
+            color: white; 
+            border: 4px solid red;
+            display: inline-block;  
+            height: 400px; 
+            width: 300px; 
+        }
+    </style>
+</head>
+<body>
+
+
+    <!--BLOCK LEVEL EXAMPLES-->
+    <!--block level elements say that new items start on a new line. think of them like stacking blocks, one sitting on top of another.-->
+    <!--block level items, or when things are displayed as block also, like building blocks have a height and width to them.-->
+
+    <h1 style="background-color: aquamarine; height: 100px;">Block Level!</h1>
+    <div style="background-color: red; height: 200px; width: 400px;">block level!</div>
+    <ul>
+        <li>Block</li>
+        <li>New</li>
+        <li>Line</li>
+        <li>Each</li>
+        <li>Element</li>
+    </ul>
+
+<!-- INLINE content is inline with the the rest of the content. It does not start a new line. Usually within a container. IT DOESNOT NOT have the ability to do height width, with some exceptions.-->
+    <h1>Inline content</h1>
+
+    <span style="height: 300px; width: 300px; background-color: cadetblue;">This is an example</span> <button>of inline content</button> <a href="#">It doesn't start a new line</a> and you can't define a height and width. <img src="../assets/logo.jpg" style="width: 300px;"/>
+   
+
+    
+    <div class="atAGlance">
+        <h2>at a glance</h2>
+        <div class="cards">
+            <div>
+                <h3>DESIGNING CONCEPTS</h3>
+                <p>I love to design things about things. don't you?</p>
+            </div>
+    
+            <div>
+                <h3>INSTRUCTOR</h3>
+                <p>I teach AME 220! I think my students are really cool and I love to teach!</p>
+            </div>
+    
+            <div>
+                <h3>DUNGEON MASTER</h3>
+                <p>I play way too much dungeons and dragons, and I love watching Dimension 20. </p>
+            </div>
+    
+    
+        </div>
+    </div>
+
+</body>
+</html>

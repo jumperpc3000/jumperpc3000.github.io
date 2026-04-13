@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISPLAY</title>
+    <style>
+
+        .pressX span {
+    border-radius: 50%; 
+    border: black .5px solid; 
+    width: 30px; 
+    height: 30px; 
+    text-align: center;
+    padding: 10px; 
+    display: inline-block; 
+
+}
+
+        .cards{
+
+            background-color: red;
+
+            display:flex; 
+            flex-direction: row;
+            justify-content: space-around;
+
+    
+        }
+        .cards > div {
+            color: white; 
+
+    border: .5px solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    padding: 10px; 
+    flex-basis: 500px;
+
+
+    /* short hand for centering items is margin: 0 auto 
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: auto; 
+    margin-left: auto;*/ 
+
+
+}
+
+
+button{
+    display: block; 
+}
+
+    </style>
+</head>
+<body>
+
+
+    
+    <div class="atAGlance">
+        <h2>at a glance</h2>
+        <div class="cards">
+            <div>
+                <h3>DESIGNING CONCEPTS</h3>
+                <p>I love to design things about things. don't you?</p>
+            </div>
+    
+            <div>
+                <h3>INSTRUCTOR</h3>
+                <p>I teach AME 220! I think my students are really cool and I love to teach!</p>
+            </div>
+    
+            <div>
+                <h3>DUNGEON MASTER</h3>
+                <p>I play way too much dungeons and dragons, and I love watching Dimension 20. </p>
+            </div>
+    
+    
+        </div>
+    </div>
+
+</body>
+</html>

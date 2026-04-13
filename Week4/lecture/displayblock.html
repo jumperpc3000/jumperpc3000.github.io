@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISPLAY</title>
+    <style>
+
+        .pressX span {
+    border-radius: 50%; 
+    border: black .5px solid; 
+    width: 30px; 
+    height: 30px; 
+    text-align: center;
+    padding: 10px; 
+    display: inline-block; 
+
+}
+
+        .cards{
+            width: 100%;
+        }
+        .cards > div {
+            color: white; 
+    background-color: black;
+    border: .5px solid blue;
+    box-sizing: border-box;
+     padding: 10px; 
+     display: inline-block; 
+
+    /* short hand for centering items is margin: 0 auto 
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: auto; 
+    margin-left: auto;*/ 
+
+
+}
+
+ul > li {
+    display: inline-block; 
+}
+
+
+button{
+    display: block; 
+}
+
+
+    </style>
+</head>
+<body>
+
+
+    <!--BLOCK LEVEL EXAMPLES-->
+
+    <h1>Block Level!</h1>
+    <ul>
+        <li>Block</li>
+        <li>New</li>
+        <li>Line</li>
+        <li>Each</li>
+        <li>Element</li>
+    </ul>
+
+    <h1>Inline content</h1>
+
+    <span>This is an example</span> <button>of inline content</button> <a href="#">It doesn't start a new line</a>
+   
+        <div class="pressX">Press <span>X</span> to continue</div>
+
+    
+    <div class="atAGlance">
+        <h2>at a glance</h2>
+        <div class="cards">
+            <div>
+                <h3>DESIGNING CONCEPTS</h3>
+                <p>I love to design things about things. don't you?</p>
+            </div>
+    
+            <div>
+                <h3>INSTRUCTOR</h3>
+                <p>I teach AME 220! I think my students are really cool and I love to teach!</p>
+            </div>
+    
+            <div>
+                <h3>DUNGEON MASTER</h3>
+                <p>I play way too much dungeons and dragons, and I love watching Dimension 20. </p>
+            </div>
+    
+    
+        </div>
+    </div>
+
+</body>
+</html>

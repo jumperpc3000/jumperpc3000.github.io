@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox Reference</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="brand-block">
+                <p class="eyebrow">Week 4 Layout Practice</p>
+                <h1>CSS Flexbox</h1>
+                <p class="subtitle">A poster page inspired by the reference sheet.</p>
+            </div>
+
+            <nav class="top-nav" aria-label="Main navigation">
+                <a href="#basics">Basics</a>
+                <a href="#alignment">Alignment</a>
+                <a href="#sizing">Sizing</a>
+                <a href="#notes">Notes</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-shell">
+        <section class="intro-panel" id="basics">
+            <div class="intro-copy">
+                <p class="section-tag">Core idea</p>
+                <h2>Flexbox Is For One Main Direction At A Time.</h2>
+                <p>
+                    A flex container controls how its direct children line up, space out,
+                    grow, shrink, wrap, and align. The parent decides the layout rules.
+                    The children react to those rules.
+                </p>
+            </div>
+
+            <div class="intro-demo card-surface">
+                <div class="label">container</div>
+                <div class="demo-strip demo-frame">
+                    <div class="tile tile-wide"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                </div>
+                <p class="mini-note">Display: flex; turns the parent into a flex container.</p>
+            </div>
+        </section>
+
+        <section class="poster-grid" aria-label="Flexbox concept cards">
+            <article class="poster-card card-surface">
+                <div class="label">container and items</div>
+                <h3>1. Parent Vs Child</h3>
+                <p>
+                    The container gets flex properties. The items inside it become flex items.
+                </p>
+                <div class="demo-strip demo-frame">
+                    <div class="tile"></div>
+                    <div class="tile tile-wide"></div>
+                    <div class="tile"></div>
+                </div>
+                <pre class="code-block">.container {
+  display: flex;
+}</pre>
+            </article>
+
+            <article class="poster-card card-surface">
+                <div class="label">flex-direction</div>
+                <h3>2. Main Axis Direction</h3>
+                <p>
+                    The main axis can go left to right, right to left, top to bottom, or bottom to top.
+                </p>
+                <div class="demo-stack">
+                    <div class="mini-demo">
+                        <span class="mini-title">row</span>
+                        <div class="demo-strip demo-frame">
+                            <div class="tile tile-small"></div>
+                            <div class="tile tile-small"></div>
+                            <div class="tile tile-small"></div>
+                        </div>
+                    </div>
+                    <div class="mini-demo">
+                        <span class="mini-title">column</span>
+                        <div class="demo-column demo-frame">
+                            <div class="tile tile-small"></div>
+                            <div class="tile tile-small"></div>
+                            <div class="tile tile-small"></div>
+                        </div>
+                    </div>
+                </div>
+                <pre class="code-block">.container {
+  flex-direction: row;
+}</pre>
+            </article>
+
+            <article class="poster-card card-surface">
+                <div class="label">flex-wrap</div>
+                <h3>3. Wrapping</h3>
+                <p>
+                    By default, flex items try to stay on one line. Wrap lets them move to a new line.
+                </p>
+                <div class="demo-wrap demo-frame">
+                    <div class="tile tile-small"></div>
+                    <div class="tile tile-small"></div>
+                    <div class="tile tile-small"></div>
+                    <div class="tile tile-small"></div>
+                    <div class="tile tile-small"></div>
+                    <div class="tile tile-small"></div>
+                </div>
+                <pre class="code-block">.container {
+  flex-wrap: wrap;
+}</pre>
+            </article>
+
+            <article class="poster-card card-surface" id="alignment">
+                <div class="label">justify-content</div>
+                <h3>4. Main-Axis Alignment</h3>
+                <p>
+                    Use justify-content to control how items spread out across the main axis.
+                </p>
+                <div class="alignment-list">
+                    <div class="alignment-row">
+                        <span>Center</span>
+                        <div class="demo-justify-center demo-frame demo-long">
+                            <div class="tile tile-small"></div>
+                            <div class="tile tile-small"></div>
+                            <div class="tile tile-small"></div>
+                        </div>
+                    </div>
+                    <div class="alignment-row">
+                        <span>Space-Between</span>
+                        <div class="demo-justify-between demo-frame demo-long">
+                            <div class="tile tile-small"></div>
+                            <div class="tile tile-small"></div>
+                            <div class="tile tile-small"></div>
+                        </div>
+                    </div>
+                    <div class="alignment-row">
+                        <span>Space-Evenly</span>
+                        <div class="demo-justify-evenly demo-frame demo-long">
+                            <div class="tile tile-small"></div>
+                            <div class="tile tile-small"></div>
+                            <div class="tile tile-small"></div>
+                        </div>
+                    </div>
+                </div>
+                <pre class="code-block">.container {
+  justify-content: space-evenly;
+}</pre>
+            </article>
+
+            <article class="poster-card card-surface">
+                <div class="label">align-items</div>
+                <h3>5. Cross-Axis Alignment</h3>
+                <p>
+                    Align-items changes how items sit across the cross axis of the current line.
+                </p>
+                <div class="demo-stack">
+                    <div class="mini-demo">
+                        <span class="mini-title">center</span>
+                        <div class="demo-align-center demo-tall demo-frame">
+                            <div class="tile tile-thin"></div>
+                            <div class="tile tile-medium"></div>
+                            <div class="tile tile-small"></div>
+                        </div>
+                    </div>
+                    <div class="mini-demo">
+                        <span class="mini-title">stretch</span>
+                        <div class="demo-align-stretch demo-tall demo-frame">
+                            <div class="tile tile-stretch"></div>
+                            <div class="tile tile-stretch"></div>
+                            <div class="tile tile-stretch"></div>
+                        </div>
+                    </div>
+                </div>
+                <pre class="code-block">.container {
+  align-items: center;
+}</pre>
+            </article>
+
+            <article class="poster-card card-surface">
+                <div class="label">align-content</div>
+                <h3>6. Multiple Lines</h3>
+                <p>
+                    Align-content only matters when the container has extra cross-axis space and multiple lines.
+                </p>
+                <div class="demo-align-content demo-frame">
+                    <div class="tile tile-small"></div>
+                    <div class="tile tile-small"></div>
+                    <div class="tile tile-small"></div>
+                    <div class="tile tile-small"></div>
+                    <div class="tile tile-small"></div>
+                    <div class="tile tile-small"></div>
+                </div>
+                <pre class="code-block">.container {
+  flex-wrap: wrap;
+  align-content: space-around;
+}</pre>
+            </article>
+
+            <article class="poster-card card-surface">
+                <div class="label">order</div>
+                <h3>7. Visual Order</h3>
+                <p>
+                    Order changes display order, but it does not change the source order in the HTML.
+                </p>
+                <div class="demo-strip demo-frame demo-order">
+                    <div class="tile number-card order-two">2</div>
+                    <div class="tile number-card order-one">1</div>
+                    <div class="tile number-card order-three">3</div>
+                </div>
+                <pre class="code-block">.featured {
+  order: -1;
+}</pre>
+            </article>
+
+            <article class="poster-card card-surface" id="sizing">
+                <div class="label">grow, shrink, basis</div>
+                <h3>8. Item Sizing Rules</h3>
+                <p>
+                    Flex-grow shares extra space. Flex-shrink helps avoid overflow. Flex-basis sets the starting size.
+                </p>
+                <div class="demo-column-slim">
+                    <div class="demo-strip demo-frame">
+                        <div class="tile number-card grow-one">1</div>
+                        <div class="tile number-card grow-two">2</div>
+                        <div class="tile number-card grow-one">1</div>
+                    </div>
+                    <div class="demo-strip demo-frame">
+                        <div class="tile number-card basis-fixed">50px</div>
+                        <div class="tile number-card grow-one">1</div>
+                        <div class="tile number-card grow-one">1</div>
+                    </div>
+                </div>
+                <pre class="code-block">.item {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 50px;
+}</pre>
+            </article>
+
+            <article class="poster-card card-surface">
+                <div class="label">align-self</div>
+                <h3>9. One Item Can Break The Rule</h3>
+                <p>
+                    Align-self overrides the shared cross-axis alignment for a single flex item.
+                </p>
+                <div class="demo-align-self demo-tall demo-frame">
+                    <div class="tile tile-self-start"></div>
+                    <div class="tile tile-self-center"></div>
+                    <div class="tile tile-self-end"></div>
+                </div>
+                <pre class="code-block">.item-special {
+  align-self: flex-end;
+}</pre>
+            </article>
+
+            <article class="poster-card card-surface" id="notes">
+                <div class="label">quick notes</div>
+                <h3>10. When To Use Flexbox</h3>
+                <ul class="notes-list">
+                    <li>Use flexbox for rows, columns, nav bars, and cards.</li>
+                    <li>Use grid when you know both rows and columns ahead of time.</li>
+                    <li>Flexbox is excellent for components inside a larger layout.</li>
+                    <li>Gap works in flexbox and gives clean spacing between items.</li>
+                </ul>
+                <div class="footer-chip-row">
+                    <span class="chip">Row</span>
+                    <span class="chip">Column</span>
+                    <span class="chip">Center</span>
+                    <span class="chip">Wrap</span>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

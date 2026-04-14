@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Document</title>
+    <style>
+        /* POSITION TYPES
+
+        TOP, BOTTOM, LEFT, RIGHT*/
+        .static {
+            background-color: aqua;
+            
+        }
+
+
+        .absolute {
+
+            background-color: red;
+            height: 400px;
+            width: 400px;
+            position: absolute;
+            top: 500px;
+            right: 10px;
+
+
+        }
+
+        .relative {
+            background-color: rgb(89, 0, 255);
+            height: 100px;
+            width: 100px;
+            position: relative;
+            top: 60px;
+            left: 50px;
+        }
+
+        .sticky {
+            background-color: yellow;
+            position: sticky;
+            top: 0px; 
+            z-index: 20;
+
+       }
+
+        .fixed {
+            background-color: blueviolet;
+            height: 100px;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+            z-index: 10;
+        }
+    </style>
+
+<body>
+    <!--
+            
+            static: default 
+
+            relative:  positoned in RELATION to itself within the parent. 
+
+            absolute: positioned in the EXACT x, y position on the page and moves with a scroll. 
+            
+            fixed: positioned in the EXACT x, y position and does NOT move with the scroll. 
+
+            scroll: positioned relatively, and then when the scroll does reach the position it sticks 
+            
+            -->
+
+
+    <div class="static">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi placeat a beatae, corporis quaerat saepe veniam
+            ipsum
+            pariatur doloribus voluptatem ea repudiandae maxime, fugiat earum, excepturi delectus. Molestias, dolores
+            atque.</p>
+    </div>
+    <div class="absolute">
+        <div class="relative"></div>
+    </div>
+
+    <div class="sticky">I'm sticky :> </div>
+    <div class="fixed">I'm a fixed position</div>
+
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa laborum doloremque odit praesentium, libero
+        blanditiis veritatis obcaecati harum quaerat facilis beatae quo delectus recusandae provident repellat ad autem
+        maxime ipsam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa laborum doloremque odit praesentium, libero
+        blanditiis veritatis obcaecati harum quaerat facilis beatae quo delectus recusandae provident repellat ad autem
+        maxime ipsam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa laborum doloremque odit praesentium, libero
+        blanditiis veritatis obcaecati harum quaerat facilis beatae quo delectus recusandae provident repellat ad autem
+        maxime ipsam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa laborum doloremque odit praesentium, libero
+        blanditiis veritatis obcaecati harum quaerat facilis beatae quo delectus recusandae provident repellat ad autem
+        maxime ipsam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa laborum doloremque odit praesentium, libero
+        blanditiis veritatis obcaecati harum quaerat facilis beatae quo delectus recusandae provident repellat ad autem
+        maxime ipsam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa laborum doloremque odit praesentium, libero
+        blanditiis veritatis obcaecati harum quaerat facilis beatae quo delectus recusandae provident repellat ad autem
+        maxime ipsam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa laborum doloremque odit praesentium, libero
+        blanditiis veritatis obcaecati harum quaerat facilis beatae quo delectus recusandae provident repellat ad autem
+        maxime ipsam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa laborum doloremque odit praesentium, libero
+        blanditiis veritatis obcaecati harum quaerat facilis beatae quo delectus recusandae provident repellat ad autem
+        maxime ipsam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa laborum doloremque odit praesentium, libero
+        blanditiis veritatis obcaecati harum quaerat facilis beatae quo delectus recusandae provident repellat ad autem
+        maxime ipsam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa laborum doloremque odit praesentium, libero
+        blanditiis veritatis obcaecati harum quaerat facilis beatae quo delectus recusandae provident repellat ad autem
+        maxime ipsam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa laborum doloremque odit praesentium, libero
+        blanditiis veritatis obcaecati harum quaerat facilis beatae quo delectus recusandae provident repellat ad autem
+        maxime ipsam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa laborum doloremque odit praesentium, libero
+        blanditiis veritatis obcaecati harum quaerat facilis beatae quo delectus recusandae provident repellat ad autem
+        maxime ipsam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa laborum doloremque odit praesentium, libero
+        blanditiis veritatis obcaecati harum quaerat facilis beatae quo delectus recusandae provident repellat ad autem
+        maxime ipsam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa laborum doloremque odit praesentium, libero
+        blanditiis veritatis obcaecati harum quaerat facilis beatae quo delectus recusandae provident repellat ad autem
+        maxime ipsam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa laborum doloremque odit praesentium, libero
+        blanditiis veritatis obcaecati harum quaerat facilis beatae quo delectus recusandae provident repellat ad autem
+        maxime ipsam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa laborum doloremque odit praesentium, libero
+        blanditiis veritatis obcaecati harum quaerat facilis beatae quo delectus recusandae provident repellat ad autem
+        maxime ipsam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa laborum doloremque odit praesentium, libero
+        blanditiis veritatis obcaecati harum quaerat facilis beatae quo delectus recusandae provident repellat ad autem
+        maxime ipsam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa laborum doloremque odit praesentium, libero
+        blanditiis veritatis obcaecati harum quaerat facilis beatae quo delectus recusandae provident repellat ad autem
+        maxime ipsam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa laborum doloremque odit praesentium, libero
+        blanditiis veritatis obcaecati harum quaerat facilis beatae quo delectus recusandae provident repellat ad autem
+        maxime ipsam.</p>
+
+</body>
+
+</html>

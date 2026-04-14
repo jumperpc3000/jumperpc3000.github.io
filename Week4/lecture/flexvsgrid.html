@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid vs Flex</title>
+    <style>
+        
+        body{
+           display: grid; 
+           grid-template-columns: 50% 50%;
+           background-color: lightgrey;
+        }
+        .gridCard{
+            height: 500px; 
+            width: 600px; 
+            box-sizing: border-box;
+            background-color: black;
+            color: white; 
+            display: grid; 
+            grid-template-rows: 70% auto auto;
+        }
+
+        
+        .gridCard > div > img {
+            height: 100%;
+            width: 100%; 
+            object-fit: cover;
+            border-radius: 24px; 
+        }
+
+        #grid{
+            padding: 12px; 
+
+        }
+
+        #buttonGrid{
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .flexCard{
+             height: 500px; 
+            width: 600px; 
+            box-sizing: border-box;
+            background-color: black;
+            color: gold;
+            display: flex; 
+            flex-direction: column;
+
+        }
+
+        .flexCard > div > img {
+height: 100%;
+            width: 100%; 
+            object-fit: cover;
+            border-radius: 24px;         }
+
+            
+
+       #flexButton{
+        display: flex; 
+        justify-content: space-evenly;
+       }
+        
+
+    </style>
+</head>
+<body>
+
+    <!--GRID is layout driven. This is when you know what is going to go where-->
+
+    <!--FLEX is content driven.-->
+ 
+    <div class="gridCard">
+       
+            <div><img src="../assets/Siggy1.jpeg"/></div>
+            <div id="contentGrid"><h2>Siggamus Cryptidus AS A GRID</h2>
+            <p>The siggy as a grid is really interesting. Note how in the grid he is specified and we must make it around the Siggy.</p></div>
+            <div id="buttonGrid"><button>ALL</button><button>HAIL</button><button>SIGGY</button></div>
+
+
+    </div>
+
+   
+    <div class="flexCard">
+    
+        <div id="flexImage"><img src="../assets/Siggy1.jpeg" /></div>
+        <div>
+            <h2>Siggamus Cryptidus AS A FLEX</h2>
+            <p>The siggy as a flex is really interesting. Note how in the flex, it is driven by the content.</p>
+        </div>
+        <div id="flexButton"><button>ALL</button><button>HAIL</button><button>SIGGY</button></div>
+    
+    
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <style>
+        *{
+            font-size: 12px; 
+        }
+
+        /* REM sizing takes it sizing portions from the root selector and applies it across the entire page*/ 
+      .grid{
+        width: 90%;
+        display: grid; 
+  grid-template-columns: minmax(min-content, 350px) minmax(150px, 1fr) 120px;
+        gap: 2rem; 
+      }
+      
+      .grid > div {
+        font-size: 2rem; 
+      }
+      /* EM takes the portion of the font size from the PARENT*/ 
+
+      .grid > div > div {
+        font-size: 1.5em; 
+      }
+
+ @media only screen and (max-width: 600px) {
+    
+    * {
+        font-size: 16px; 
+    }
+  
+    body {
+    background-color: lightblue;
+  }
+
+  .grid{
+        width: 90%;
+        display: flex; 
+flex-direction: column;        
+gap: 2rem; 
+      }
+
+      h1{
+        position: fixed; 
+        top: 0px;
+        left: 0px; 
+        background-color: darkblue;
+        color: white; 
+        width: 100vw; 
+      }
+}
+
+    </style>
+</head>
+<body>
+    <h1>POSITION CHANGE</h1>
+    <div class="grid">
+
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corporis minima dicta culpa quasi, expedita a maxime quia cum iusto suscipit dolore veniam aperiam modi quo, error illum placeat reprehenderit.
+
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex iste rem, atque quam odit veritatis possimus non? Architecto nemo nulla reprehenderit porro laboriosam, a minus aut, dolorem, cumque beatae assumenda.</div>
+    </div>
+    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi quia commodi, debitis architecto iusto, quisquam eum labore expedita repellendus id incidunt maxime. Earum eius illo, facere reiciendis velit ipsum tenetur?</div>
+    <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur nam culpa tempore ea fugit molestias quis id veritatis quasi mollitia quisquam natus reiciendis, nisi excepturi eaque numquam, rerum quos dolorum.</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat mollitia praesentium aspernatur officia distinctio, vero accusantium nam voluptates commodi, maiores dolorum dolor blanditiis esse adipisci deleniti tempore officiis in minus.</div>
+
+        
+    </div>
+</body>
+</html>

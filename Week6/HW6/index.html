@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Break Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="app">
+        <header>
+            <p class="label">Homework 6: Event Listeners Assignment</p>
+            <h1>Study Break Planner</h1>
+            <p id="greeting">Welcome!</p>
+        </header>
+
+        <section class="card intro-card">
+            <h2>Study Break Control Center</h2>
+            <p>
+                This website helps students plan a useful study break. It uses the five JavaScript interactions, listed
+                below, with event listeners, events, and functions.
+            </p>
+
+            <ul>
+                <li>When the webpage loads, the greeting message changes based on the time of day.</li>
+                <li>When the user clicks the “Press me!” button, an alert appears that says “Pressed.”</li>
+                <li>When the user clicks inside the reminder text box, the focus message changes.</li>
+                <li>When the user clicks the “Add Reminder” button, the typed reminder is added to the list.</li>
+                <li>When the user hovers over the break idea section, a new break idea appears.</li>
+            </ul>
+            <button id="press-button">Press me!</button>
+        </section>
+
+        <section class="card">
+            <h2>Write a break reminder</h2>
+            <input id="reminder-input" type="text" placeholder="Example: Drink water or stretch">
+            <p id="focus-message">Click inside the text box to see a message.</p>
+        </section>
+
+        <section class="card">
+            <h2>Add the reminder to your list</h2>
+            <button id="add-button">Add Reminder</button>
+            <ul id="reminder-list"></ul>
+        </section>
+
+        <section class="card activity-card" id="activity-card">
+            <h2>Hover for a break idea</h2>
+            <p id="hover-message">Move your mouse over this section to reveal a break idea.</p>
+        </section>
+
+
+    </main>
+</body>
+
+</html>

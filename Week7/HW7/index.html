@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Week Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="app">
+        <header class="hero card">
+            <p class="label">Homework 7: API Assignment</p>
+            <h1>Weather Week Planner</h1>
+            <p>
+                This page asks for your location, sends your latitude and longitude to the Open-Meteo API, and creates
+                seven weather cards for the week.
+            </p>
+        </header>
+
+        <section class="status-card card">
+            <div>
+                <h2>Your Location</h2>
+                <p id="locationText">Waiting for location permission...</p>
+            </div>
+            <div>
+                <h2>API Status</h2>
+                <p id="statusText">Loading...</p>
+            </div>
+        </section>
+
+        <section class="forecast-section">
+            <div class="section-title">
+                <p class="label">7 Day Forecast</p>
+                <h2>Highs, Lows, Sunrise, and Sunset</h2>
+            </div>
+
+            <div id="forecastCards" class="forecast-cards">
+                <!-- Weather cards are created here -->
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
